@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--
+  ═══════════════════════════════════════════════════════════════════════
+  CLÍNICA DENTAL VITACURA — SITIO DEMO (especulativo, no oficial)
+  ═══════════════════════════════════════════════════════════════════════
+
+  ARGUMENTOS DE VENTA QUE ESTA DEMO DEMUESTRA (para recordar en el pitch):
+
+   1. INMERSIÓN  → La timeline "50 años de sonrisas" con scroll cinemático
+                   convierte la mayor fortaleza de la clínica (su historia)
+                   en una experiencia que ninguna web Wix puede igualar.
+
+   2. CONVERSIÓN → CTA de agenda siempre a la vista, WhatsApp flotante y un
+                   formulario claro transforman visitas en pacientes. Su web
+                   actual no tiene NINGÚN camino de conversión.
+
+   3. PRESTIGIO  → Dirección de arte boutique (marfil, tinta y dorado) a la
+                   altura de la esquina Alonso de Córdova. La web pasa a ser
+                   un activo de marca, no un folleto olvidado.
+
+  ───────────────────────────────────────────────────────────────────────
+  Esto es una MAQUETA. Testimonios y equipo son placeholders marcados.
+  Los datos de contacto (dirección, teléfonos, especialidades) son reales.
+  ═══════════════════════════════════════════════════════════════════════
+-->
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#13294B" />
+
+  <!-- ── SEO on-page ── -->
+  <title>Clínica Dental Vitacura | 50 años en Alonso de Córdova</title>
+  <meta name="description" content="Clínica Dental Vitacura: más de 50 años cuidando la sonrisa de Vitacura en la esquina de Av. Vitacura con Alonso de Córdova. 8 especialidades, equipo multidisciplinario y atención de tres generaciones. Agenda tu evaluación." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.clinicadentalvitacura.cl/" />
+
+  <!-- ── Open Graph / redes ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="Clínica Dental Vitacura" />
+  <meta property="og:title" content="Clínica Dental Vitacura | 50 años en Alonso de Córdova" />
+  <meta property="og:description" content="Más de 50 años cuidando la sonrisa de Vitacura. 8 especialidades en la esquina de Alonso de Córdova. Agenda tu evaluación." />
+  <meta property="og:url" content="https://www.clinicadentalvitacura.cl/" />
+  <meta property="og:image" content="https://www.clinicadentalvitacura.cl/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clínica Dental Vitacura | 50 años en Alonso de Córdova" />
+  <meta name="twitter:description" content="Más de 50 años cuidando la sonrisa de Vitacura. Agenda tu evaluación." />
+
+  <!-- ── Fuentes (display=swap, sin layout shift) ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ── Schema.org: Dentist (datos reales) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Clínica Dental Vitacura",
+    "description": "Clínica dental con más de 50 años de trayectoria en la comuna de Vitacura.",
+    "telephone": "+56222288414",
+    "url": "https://www.clinicadentalvitacura.cl/",
+    "image": "https://www.clinicadentalvitacura.cl/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Vitacura 3738, esquina Alonso de Córdova",
+      "addressLocality": "Vitacura",
+      "addressRegion": "Región Metropolitana",
+      "addressCountry": "CL"
+    },
+    "areaServed": "Vitacura, Santiago de Chile",
+    "medicalSpecialty": [
+      "Rehabilitación Oral", "Operatoria", "Periodoncia", "Ortodoncia",
+      "Cirugía", "Odontopediatría", "Disfunción y Bruxismo", "Implantología"
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313294B'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23C9A86A' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="bg-marfil font-sans text-tinta antialiased">
+
+  <!-- ╔═══════════════════ NAVEGACIÓN FIJA ═══════════════════╗ -->
+  <header id="nav" class="fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-suave">
+    <div class="mx-auto flex max-w-contenido items-center justify-between px-5 py-4 md:px-8">
+      <a href="#hero" class="group flex items-center gap-2.5" aria-label="Inicio — Clínica Dental Vitacura">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-tinta font-serif text-lg text-dorado">V</span>
+        <span class="font-serif text-[15px] leading-tight tracking-tight">
+          Clínica Dental<br /><span class="text-dorado">Vitacura</span>
+        </span>
+      </a>
+
+      <!-- Links desktop -->
+      <nav class="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="Navegación principal">
+        <a href="#historia" class="nav-link">Historia</a>
+        <a href="#especialidades" class="nav-link">Especialidades</a>
+        <a href="#equipo" class="nav-link">Equipo</a>
+        <a href="#ubicacion" class="nav-link">Ubicación</a>
+        <a href="#contacto" class="rounded-full bg-tinta px-5 py-2.5 text-marfil transition hover:bg-tinta-soft">Agendar evaluación</a>
+      </nav>
+
+      <!-- Botón menú móvil -->
+      <button id="menu-toggle" class="grid h-10 w-10 place-items-center rounded-lg text-tinta md:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" /></svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    <nav id="menu-movil" class="hidden border-t border-tinta/10 bg-marfil/95 px-5 py-4 backdrop-blur md:hidden" aria-label="Navegación móvil">
+      <div class="flex flex-col gap-1 text-sm font-medium">
+        <a href="#historia" class="rounded-lg px-3 py-3 hover:bg-marfil-2">Historia</a>
+        <a href="#especialidades" class="rounded-lg px-3 py-3 hover:bg-marfil-2">Especialidades</a>
+        <a href="#equipo" class="rounded-lg px-3 py-3 hover:bg-marfil-2">Equipo</a>
+        <a href="#ubicacion" class="rounded-lg px-3 py-3 hover:bg-marfil-2">Ubicación</a>
+        <a href="#contacto" class="mt-1 rounded-full bg-tinta px-3 py-3 text-center text-marfil">Agendar evaluación</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ╔═══════════════════ 1 · HERO ═══════════════════╗ -->
+    <section id="hero" class="relative flex min-h-[100svh] items-center overflow-hidden">
+      <!-- Fondo: gradiente animado + textura de líneas (placeholder de video) -->
+      <!-- FOTO REAL: aquí puede ir un video/foto de la fachada en Alonso de Córdova con overlay tinta. -->
+      <div class="hero-bg absolute inset-0 -z-10"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-marfil/20 via-marfil/60 to-marfil"></div>
+
+      <div class="mx-auto w-full max-w-contenido px-5 pt-28 pb-16 md:px-8">
+        <p class="reveal mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-ancho text-dorado">
+          <span class="h-px w-8 bg-dorado"></span> Desde 1975 · Vitacura
+        </p>
+        <h1 class="reveal max-w-4xl font-serif text-4xl font-light leading-[1.05] sm:text-5xl md:text-7xl">
+          50 años cuidando<br />la <span class="italic text-tinta-soft">sonrisa</span> de Vitacura
+        </h1>
+        <p class="reveal mt-7 max-w-xl text-base leading-relaxed text-tinta/75 md:text-lg">
+          En la esquina de Av. Vitacura con Alonso de Córdova, tres generaciones
+          de pacientes han confiado su sonrisa a un mismo equipo. Esa es nuestra
+          herencia; tu cuidado, nuestro presente.
+        </p>
+        <div class="reveal mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="#contacto" class="group inline-flex items-center justify-center gap-2 rounded-full bg-tinta px-7 py-4 text-sm font-medium text-marfil shadow-lg shadow-tinta/15 transition hover:bg-tinta-soft">
+            Agendar evaluación
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+          </a>
+          <a href="https://wa.me/56999190394?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20en%20Cl%C3%ADnica%20Dental%20Vitacura" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-full border border-tinta/20 px-7 py-4 text-sm font-medium text-tinta transition hover:border-tinta hover:bg-white/40">
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.42 1.3-1.96 1.34-.5.04-.5.4-3.16-.66-2.66-1.06-4.32-3.8-4.45-3.97-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.91.91-2.17.24-.26.52-.33.7-.33.17 0 .35 0 .5.01.16.01.38-.06.59.45.24.59.81 2.04.88 2.19.07.15.12.32.02.51-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.66-.17 1.34Z" /></svg>
+            WhatsApp directo
+          </a>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll -->
+      <div class="pointer-events-none absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-tinta/40 md:flex">
+        <span class="text-[10px] uppercase tracking-ancho">Scroll</span>
+        <span class="h-10 w-px animate-pulse bg-tinta/30"></span>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 2 · BARRA DE CONFIANZA ═══════════════════╗ -->
+    <section aria-label="Cifras de la clínica" class="border-y border-tinta/10 bg-marfil-2">
+      <div class="mx-auto grid max-w-contenido grid-cols-2 divide-tinta/10 px-5 md:grid-cols-4 md:divide-x md:px-8">
+        <div class="trust-item flex flex-col items-center gap-1 px-2 py-7 text-center">
+          <span class="font-serif text-3xl text-tinta md:text-4xl">50+</span>
+          <span class="text-xs uppercase tracking-wide text-tinta/60">Años de trayectoria</span>
+        </div>
+        <div class="trust-item flex flex-col items-center gap-1 px-2 py-7 text-center">
+          <span class="font-serif text-3xl text-tinta md:text-4xl">3</span>
+          <span class="text-xs uppercase tracking-wide text-tinta/60">Generaciones de pacientes</span>
+        </div>
+        <div class="trust-item flex flex-col items-center gap-1 px-2 py-7 text-center">
+          <span class="font-serif text-3xl text-tinta md:text-4xl">8</span>
+          <span class="text-xs uppercase tracking-wide text-tinta/60">Especialidades</span>
+        </div>
+        <div class="trust-item flex flex-col items-center gap-1 px-2 py-7 text-center">
+          <span class="font-serif text-3xl text-tinta md:text-4xl">A. de Córdova</span>
+          <span class="text-xs uppercase tracking-wide text-tinta/60">Nuestra esquina</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 3 · TIMELINE "50 AÑOS DE SONRISAS" ═══════════════════╗ -->
+    <!-- Sección estrella: animación dirigida por scroll (GSAP ScrollTrigger). -->
+    <section id="historia" class="relative bg-tinta text-marfil">
+      <div class="mx-auto max-w-contenido px-5 pt-20 pb-10 text-center md:px-8 md:pt-28">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-ancho text-dorado">Nuestra herencia</p>
+        <h2 class="mx-auto max-w-2xl font-serif text-3xl font-light leading-tight md:text-5xl">
+          50 años de sonrisas
+        </h2>
+        <p class="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-marfil/60 md:text-base">
+          Recorre las décadas que construyeron la confianza de Vitacura.
+          Una historia que ninguna otra clínica del barrio puede contar.
+        </p>
+      </div>
+
+      <!-- Pista de la timeline: cada "década" es un panel -->
+      <div id="timeline" class="relative">
+        <!-- Línea vertical dorada (se "dibuja" con el scroll) -->
+        <div class="pointer-events-none absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-marfil/10">
+          <div id="timeline-progress" class="absolute left-0 top-0 w-full origin-top bg-dorado" style="height: 100%; transform: scaleY(0);"></div>
+        </div>
+
+        <div class="mx-auto flex max-w-contenido flex-col gap-16 px-5 py-12 md:gap-28 md:px-8 md:py-20">
+          <!-- Década 1 -->
+          <article class="tl-item relative md:w-1/2 md:pr-14 md:text-right">
+            <div class="tl-art tl-art-1 mb-5 h-40 rounded-2xl md:h-48"></div>
+            <span class="font-serif text-4xl text-dorado md:text-5xl">1975</span>
+            <h3 class="mt-2 font-serif text-xl md:text-2xl">Nace una casa de confianza</h3>
+            <p class="mt-2 text-sm leading-relaxed text-marfil/65">
+              Abrimos las puertas en Vitacura con una convicción simple: tratar a
+              cada paciente como a la familia. Esa primera consulta marcó el inicio
+              de todo.
+            </p>
+          </article>
+
+          <!-- Década 2 -->
+          <article class="tl-item relative md:ml-auto md:w-1/2 md:pl-14">
+            <div class="tl-art tl-art-2 mb-5 h-40 rounded-2xl md:h-48"></div>
+            <span class="font-serif text-4xl text-dorado md:text-5xl">Años 80</span>
+            <h3 class="mt-2 font-serif text-xl md:text-2xl">Crecemos con el barrio</h3>
+            <p class="mt-2 text-sm leading-relaxed text-marfil/65">
+              Llegan las primeras especialidades y, con ellas, las segundas
+              generaciones: hijos de nuestros primeros pacientes se sientan en el
+              mismo sillón.
+            </p>
+          </article>
+
+          <!-- Década 3 -->
+          <article class="tl-item relative md:w-1/2 md:pr-14 md:text-right">
+            <div class="tl-art tl-art-3 mb-5 h-40 rounded-2xl md:h-48"></div>
+            <span class="font-serif text-4xl text-dorado md:text-5xl">Años 90</span>
+            <h3 class="mt-2 font-serif text-xl md:text-2xl">Equipo multidisciplinario</h3>
+            <p class="mt-2 text-sm leading-relaxed text-marfil/65">
+              Consolidamos un equipo que resuelve cada caso bajo un mismo techo:
+              de la ortodoncia a la rehabilitación oral, sin derivar a nadie fuera
+              de su clínica de siempre.
+            </p>
+          </article>
+
+          <!-- Década 4 -->
+          <article class="tl-item relative md:ml-auto md:w-1/2 md:pl-14">
+            <div class="tl-art tl-art-4 mb-5 h-40 rounded-2xl md:h-48"></div>
+            <span class="font-serif text-4xl text-dorado md:text-5xl">2000s</span>
+            <h3 class="mt-2 font-serif text-xl md:text-2xl">Tecnología al servicio del trato</h3>
+            <p class="mt-2 text-sm leading-relaxed text-marfil/65">
+              Incorporamos implantología y nuevas técnicas, siempre con el mismo
+              principio: la mejor tecnología solo vale si la acompaña una atención
+              cercana.
+            </p>
+          </article>
+
+          <!-- Hoy -->
+          <article class="tl-item relative md:w-1/2 md:pr-14 md:text-right">
+            <div class="tl-art tl-art-5 mb-5 h-40 rounded-2xl md:h-48"></div>
+            <span class="font-serif text-4xl text-dorado md:text-5xl">Hoy</span>
+            <h3 class="mt-2 font-serif text-xl md:text-2xl">Tres generaciones, una sonrisa</h3>
+            <p class="mt-2 text-sm leading-relaxed text-marfil/65">
+              Medio siglo después, seguimos en la misma esquina premium de
+              Vitacura. La historia continúa contigo.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="mx-auto max-w-contenido px-5 pb-20 text-center md:px-8 md:pb-28">
+        <a href="#contacto" class="inline-flex items-center gap-2 rounded-full bg-dorado px-7 py-4 text-sm font-medium text-tinta transition hover:bg-dorado-soft">
+          Sé parte de la próxima década
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 4 · ESPECIALIDADES ═══════════════════╗ -->
+    <section id="especialidades" class="mx-auto max-w-contenido px-5 py-20 md:px-8 md:py-28">
+      <div class="mb-12 max-w-2xl">
+        <p class="mb-4 text-xs font-semibold uppercase tracking-ancho text-dorado">Lo que hacemos</p>
+        <h2 class="font-serif text-3xl font-light leading-tight md:text-5xl">Ocho especialidades, un mismo techo</h2>
+        <p class="mt-5 text-tinta/70">Resolvemos cada caso sin derivarte a otra parte. Tu historia clínica, completa y en un solo lugar.</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Cada tarjeta: ícono SVG + nombre + 2 líneas. Edita libremente los textos. -->
+        <article class="esp-card group">
+          <div class="esp-ico">🦷</div>
+          <h3 class="esp-titulo">Rehabilitación Oral</h3>
+          <p class="esp-desc">Coronas y prótesis que devuelven la función y la estética. Recupera tu mordida y tu confianza al sonreír.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">✨</div>
+          <h3 class="esp-titulo">Operatoria</h3>
+          <p class="esp-desc">Restauraciones precisas que detienen las caries a tiempo. Materiales estéticos que se mimetizan con tu diente.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">🌿</div>
+          <h3 class="esp-titulo">Periodoncia</h3>
+          <p class="esp-desc">Cuidamos las encías, el cimiento de toda sonrisa sana. Prevención y tratamiento de la enfermedad periodontal.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">📐</div>
+          <h3 class="esp-titulo">Ortodoncia</h3>
+          <p class="esp-desc">Alineamos tus dientes con planes a tu ritmo y estilo de vida. Para niños, adolescentes y adultos.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">⚕️</div>
+          <h3 class="esp-titulo">Cirugía</h3>
+          <p class="esp-desc">Procedimientos seguros y con seguimiento cercano. Desde extracciones hasta cirugía oral compleja.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">🧸</div>
+          <h3 class="esp-titulo">Odontopediatría</h3>
+          <p class="esp-desc">Atención cálida para niños hasta los 12 años. Construimos una relación sana con el dentista desde pequeños.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">😌</div>
+          <h3 class="esp-titulo">Disfunción y Bruxismo</h3>
+          <p class="esp-desc">Aliviamos el dolor mandibular y el desgaste por apretar. Planos de relajación a tu medida.</p>
+        </article>
+        <article class="esp-card group">
+          <div class="esp-ico">🔩</div>
+          <h3 class="esp-titulo">Implantología</h3>
+          <p class="esp-desc">Reemplazamos piezas perdidas con implantes de aspecto natural. Una solución firme y duradera.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 5 · POR QUÉ NOS ELIGEN ═══════════════════╗ -->
+    <section class="bg-marfil-2">
+      <div class="mx-auto max-w-contenido px-5 py-20 md:px-8 md:py-28">
+        <div class="mb-12 max-w-2xl">
+          <p class="mb-4 text-xs font-semibold uppercase tracking-ancho text-dorado">La diferencia</p>
+          <h2 class="font-serif text-3xl font-light leading-tight md:text-5xl">Por qué tres generaciones nos eligen</h2>
+        </div>
+        <div class="grid grid-cols-1 gap-px overflow-hidden rounded-2xl bg-tinta/10 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="valor-card">
+            <span class="valor-num">01</span>
+            <h3 class="valor-titulo">Confianza heredada</h3>
+            <p class="valor-desc">Cinco décadas en la misma esquina. Nos eligen los hijos y nietos de nuestros primeros pacientes.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-num">02</span>
+            <h3 class="valor-titulo">Equipo completo</h3>
+            <p class="valor-desc">Ocho especialidades bajo un mismo techo. Tu tratamiento se coordina sin derivaciones externas.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-num">03</span>
+            <h3 class="valor-titulo">Trato familiar</h3>
+            <p class="valor-desc">Te conocemos por tu nombre, no por un número de ficha. La cercanía es parte del tratamiento.</p>
+          </div>
+          <div class="valor-card">
+            <span class="valor-num">04</span>
+            <h3 class="valor-titulo">Ubicación premium</h3>
+            <p class="valor-desc">Av. Vitacura con Alonso de Córdova: fácil acceso, estacionamiento cercano y el mejor entorno.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 6 · EQUIPO (placeholder) ═══════════════════╗ -->
+    <section id="equipo" class="mx-auto max-w-contenido px-5 py-20 md:px-8 md:py-28">
+      <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-dorado/40 bg-dorado/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-tinta/70">
+        ⚠ Sección placeholder — reemplazar con el equipo real
+      </div>
+      <div class="mb-12 max-w-2xl">
+        <h2 class="font-serif text-3xl font-light leading-tight md:text-5xl">El equipo detrás de tu sonrisa</h2>
+        <p class="mt-5 text-tinta/70">Profesionales de distintas especialidades, una sola vocación. <span class="text-tinta/45">(Fotos y nombres se reemplazarán con el equipo real de la clínica.)</span></p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <!-- FOTO REAL: reemplazar la silueta por la fotografía profesional del dentista. -->
+        <article class="equipo-card"><div class="equipo-foto"></div><h3 class="equipo-nombre">Dr./Dra. [Nombre]</h3><p class="equipo-esp">Rehabilitación Oral</p></article>
+        <article class="equipo-card"><div class="equipo-foto"></div><h3 class="equipo-nombre">Dr./Dra. [Nombre]</h3><p class="equipo-esp">Ortodoncia</p></article>
+        <article class="equipo-card"><div class="equipo-foto"></div><h3 class="equipo-nombre">Dr./Dra. [Nombre]</h3><p class="equipo-esp">Periodoncia</p></article>
+        <article class="equipo-card"><div class="equipo-foto"></div><h3 class="equipo-nombre">Dr./Dra. [Nombre]</h3><p class="equipo-esp">Odontopediatría</p></article>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 7 · TESTIMONIOS (placeholder ético) ═══════════════════╗ -->
+    <section class="bg-tinta text-marfil">
+      <div class="mx-auto max-w-contenido px-5 py-20 md:px-8 md:py-28">
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-dorado/40 bg-dorado/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-marfil/80">
+          ⚠ Testimonios de ejemplo — se reemplazarán con reseñas reales
+        </div>
+        <h2 class="max-w-2xl font-serif text-3xl font-light leading-tight md:text-5xl">Lo que dicen quienes vuelven</h2>
+
+        <div class="relative mt-12">
+          <div id="testi-track" class="overflow-hidden">
+            <div id="testi-slides" class="flex transition-transform duration-500 ease-suave">
+              <blockquote class="testi-slide">
+                <p class="testi-texto">“[Testimonio de ejemplo — se reemplazará con reseñas reales del cliente.] Aquí irá la experiencia real de un paciente que confía su sonrisa a la clínica.”</p>
+                <footer class="testi-autor">— Paciente de ejemplo · Vitacura</footer>
+              </blockquote>
+              <blockquote class="testi-slide">
+                <p class="testi-texto">“[Testimonio de ejemplo — se reemplazará con reseñas reales del cliente.] Espacio reservado para una reseña verificada de Google o del propio paciente.”</p>
+                <footer class="testi-autor">— Paciente de ejemplo · Vitacura</footer>
+              </blockquote>
+              <blockquote class="testi-slide">
+                <p class="testi-texto">“[Testimonio de ejemplo — se reemplazará con reseñas reales del cliente.] Las reseñas reales reforzarán la confianza de 50 años de trayectoria.”</p>
+                <footer class="testi-autor">— Paciente de ejemplo · Vitacura</footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="mt-8 flex items-center gap-3">
+            <button id="testi-prev" class="testi-nav" aria-label="Testimonio anterior">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m15 6-6 6 6 6" /></svg>
+            </button>
+            <button id="testi-next" class="testi-nav" aria-label="Testimonio siguiente">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 6 6 6-6 6" /></svg>
+            </button>
+            <div id="testi-dots" class="ml-2 flex gap-2" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 8 · UBICACIÓN ═══════════════════╗ -->
+    <section id="ubicacion" class="mx-auto max-w-contenido px-5 py-20 md:px-8 md:py-28">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="mb-4 text-xs font-semibold uppercase tracking-ancho text-dorado">Cómo llegar</p>
+          <h2 class="font-serif text-3xl font-light leading-tight md:text-5xl">En la esquina más premium de Vitacura</h2>
+          <p class="mt-5 text-tinta/70">Av. Vitacura 3738, esquina Alonso de Córdova. Rodeados de las mejores tiendas, con fácil acceso y estacionamiento en el sector.</p>
+
+          <dl class="mt-8 space-y-4 text-sm">
+            <div class="flex gap-3">
+              <span class="text-dorado">📍</span>
+              <div><dt class="font-semibold">Dirección</dt><dd class="text-tinta/70">Av. Vitacura 3738, esq. Alonso de Córdova, Vitacura, Santiago</dd></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-dorado">🕘</span>
+              <!-- Horarios placeholder: confirmar con la clínica. -->
+              <div><dt class="font-semibold">Horarios <span class="text-tinta/40">(placeholder)</span></dt><dd class="text-tinta/70">Lunes a viernes · 09:00 – 19:00</dd></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-dorado">📞</span>
+              <div><dt class="font-semibold">Teléfono</dt><dd><a href="tel:+56222288414" class="text-tinta/70 underline-offset-2 hover:text-tinta hover:underline">+56 2 2228 8414</a></dd></div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-dorado">💬</span>
+              <div><dt class="font-semibold">WhatsApp</dt><dd><a href="https://wa.me/56999190394" target="_blank" rel="noopener" class="text-tinta/70 underline-offset-2 hover:text-tinta hover:underline">+56 9 9919 0394</a></dd></div>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Mapa embebido (lazy-load) apuntando a la dirección real -->
+        <div class="overflow-hidden rounded-2xl border border-tinta/10 shadow-xl shadow-tinta/5">
+          <iframe
+            title="Mapa de Clínica Dental Vitacura en Av. Vitacura 3738"
+            src="https://www.google.com/maps?q=Av.%20Vitacura%203738%2C%20Vitacura%2C%20Santiago%2C%20Chile&output=embed"
+            width="100%" height="420" style="border:0; display:block;"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔═══════════════════ 9 · CONTACTO / AGENDA ═══════════════════╗ -->
+    <section id="contacto" class="bg-marfil-2">
+      <div class="mx-auto max-w-contenido px-5 py-20 md:px-8 md:py-28">
+        <div class="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+          <div>
+            <p class="mb-4 text-xs font-semibold uppercase tracking-ancho text-dorado">Tu próxima sonrisa</p>
+            <h2 class="font-serif text-3xl font-light leading-tight md:text-5xl">Agenda tu evaluación</h2>
+            <p class="mt-5 max-w-md text-tinta/70">Cuéntanos qué necesitas y te contactamos para coordinar tu hora. Sin compromiso, con la cercanía de siempre.</p>
+            <div class="mt-8 rounded-xl border border-dorado/30 bg-dorado/5 p-4 text-sm text-tinta/70">
+              <strong class="font-semibold text-tinta">Demo:</strong> este formulario simula el envío.
+              En el sitio real se integra con <strong>Dentalink / AgendaPro / Reservo</strong> para agenda online en vivo.
+            </div>
+          </div>
+
+          <!-- Formulario: no envía a ningún backend; simula éxito (ver main.js). -->
+          <form id="form-agenda" class="rounded-2xl border border-tinta/10 bg-white/60 p-6 shadow-xl shadow-tinta/5 md:p-8" novalidate>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="sm:col-span-1">
+                <label for="f-nombre" class="form-label">Nombre</label>
+                <input id="f-nombre" name="nombre" type="text" required autocomplete="name" class="form-input" placeholder="Tu nombre" />
+              </div>
+              <div class="sm:col-span-1">
+                <label for="f-telefono" class="form-label">Teléfono</label>
+                <input id="f-telefono" name="telefono" type="tel" required autocomplete="tel" class="form-input" placeholder="+56 9 ..." />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="f-email" class="form-label">Email</label>
+                <input id="f-email" name="email" type="email" required autocomplete="email" class="form-input" placeholder="tu@correo.cl" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="f-especialidad" class="form-label">Especialidad de interés</label>
+                <select id="f-especialidad" name="especialidad" class="form-input">
+                  <option value="">Selecciona una opción</option>
+                  <option>Rehabilitación Oral</option>
+                  <option>Operatoria</option>
+                  <option>Periodoncia</option>
+                  <option>Ortodoncia</option>
+                  <option>Cirugía</option>
+                  <option>Odontopediatría</option>
+                  <option>Disfunción y Bruxismo</option>
+                  <option>Implantología</option>
+                  <option>No estoy seguro/a</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label for="f-mensaje" class="form-label">Mensaje</label>
+                <textarea id="f-mensaje" name="mensaje" rows="3" class="form-input resize-none" placeholder="Cuéntanos brevemente qué necesitas"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-tinta px-7 py-4 text-sm font-medium text-marfil transition hover:bg-tinta-soft sm:w-auto">
+              <span class="btn-label">Solicitar evaluación</span>
+              <svg class="btn-spinner hidden h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8v3a5 5 0 0 0-5 5H4Z"></path></svg>
+            </button>
+            <!-- Mensaje de éxito (se revela con animación tras "enviar") -->
+            <div id="form-exito" class="mt-5 hidden items-center gap-3 rounded-xl bg-tinta/5 p-4 text-sm text-tinta" role="status">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-dorado text-tinta">✓</span>
+              <span><strong>¡Gracias!</strong> Recibimos tu solicitud (demo). Te contactaríamos a la brevedad para coordinar tu hora.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ╔═══════════════════ 10 · FOOTER ═══════════════════╗ -->
+  <footer class="bg-tinta text-marfil">
+    <div class="mx-auto max-w-contenido px-5 py-14 md:px-8">
+      <div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="grid h-9 w-9 place-items-center rounded-lg bg-marfil/10 font-serif text-lg text-dorado">V</span>
+            <span class="font-serif text-base leading-tight">Clínica Dental<br /><span class="text-dorado">Vitacura</span></span>
+          </div>
+          <p class="mt-4 max-w-xs text-sm text-marfil/55">50 años cuidando la sonrisa de Vitacura, en la esquina de Alonso de Córdova.</p>
+        </div>
+        <div class="text-sm">
+          <h3 class="mb-3 text-xs font-semibold uppercase tracking-ancho text-dorado">Contacto</h3>
+          <ul class="space-y-2 text-marfil/65">
+            <li>Av. Vitacura 3738, esq. Alonso de Córdova</li>
+            <li>Vitacura, Santiago</li>
+            <li><a href="tel:+56222288414" class="hover:text-marfil">+56 2 2228 8414</a></li>
+            <li><a href="https://wa.me/56999190394" target="_blank" rel="noopener" class="hover:text-marfil">WhatsApp: +56 9 9919 0394</a></li>
+          </ul>
+        </div>
+        <div class="text-sm">
+          <h3 class="mb-3 text-xs font-semibold uppercase tracking-ancho text-dorado">Navegación</h3>
+          <ul class="space-y-2 text-marfil/65">
+            <li><a href="#historia" class="hover:text-marfil">Historia</a></li>
+            <li><a href="#especialidades" class="hover:text-marfil">Especialidades</a></li>
+            <li><a href="#equipo" class="hover:text-marfil">Equipo</a></li>
+            <li><a href="#ubicacion" class="hover:text-marfil">Ubicación</a></li>
+            <li><a href="#contacto" class="hover:text-marfil">Agendar</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 flex flex-col gap-2 border-t border-marfil/10 pt-6 text-xs text-marfil/40 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span id="year"></span> Clínica Dental Vitacura. Todos los derechos reservados.</p>
+        <p>Sitio demo no oficial · maqueta de presentación.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WhatsApp flotante (presente en todo el sitio) ── -->
+  <a href="https://wa.me/56999190394?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20en%20Cl%C3%ADnica%20Dental%20Vitacura" target="_blank" rel="noopener"
+     class="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 transition hover:scale-105"
+     aria-label="Escríbenos por WhatsApp">
+    <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.42 1.3-1.96 1.34-.5.04-.5.4-3.16-.66-2.66-1.06-4.32-3.8-4.45-3.97-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.91.91-2.17.24-.26.52-.33.7-.33.17 0 .35 0 .5.01.16.01.38-.06.59.45.24.59.81 2.04.88 2.19.07.15.12.32.02.51-.09.18-.14.3-.28.46-.14.16-.29.36-.42.48-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.27.13.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.22.6-.13.25.09 1.57.74 1.84.87.27.13.45.2.51.31.07.11.07.66-.17 1.34Z" /></svg>
+  </a>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

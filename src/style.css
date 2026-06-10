@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ════════════════════════════════════════════════════════════════
+   ESTILOS BASE
+   ════════════════════════════════════════════════════════════════ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Lenis controla el scroll: desactivamos el nativo cuando está activo. */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Focus visible accesible en todo el sitio (contraste AA). */
+  :focus-visible {
+    outline: 2px solid theme('colors.dorado');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: theme('colors.dorado');
+    color: theme('colors.tinta');
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   COMPONENTES REUTILIZABLES
+   ════════════════════════════════════════════════════════════════ */
+@layer components {
+  .nav-link {
+    @apply relative text-tinta/80 transition-colors hover:text-tinta;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-px w-0 bg-dorado transition-all duration-300 ease-suave;
+  }
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* ── Tarjetas de especialidades ── */
+  .esp-card {
+    @apply rounded-2xl border border-tinta/10 bg-white/40 p-6 transition-all duration-300 ease-suave hover:-translate-y-1 hover:border-dorado/40 hover:bg-white hover:shadow-xl hover:shadow-tinta/5;
+  }
+  .esp-ico {
+    @apply mb-4 grid h-12 w-12 place-items-center rounded-xl bg-marfil-2 text-2xl transition-colors duration-300 group-hover:bg-dorado/15;
+  }
+  .esp-titulo {
+    @apply font-serif text-lg text-tinta;
+  }
+  .esp-desc {
+    @apply mt-2 text-sm leading-relaxed text-tinta/65;
+  }
+
+  /* ── Bloques de propuesta de valor ── */
+  .valor-card {
+    @apply bg-marfil-2 p-7 transition-colors hover:bg-white;
+  }
+  .valor-num {
+    @apply font-serif text-sm text-dorado;
+  }
+  .valor-titulo {
+    @apply mt-3 font-serif text-lg text-tinta;
+  }
+  .valor-desc {
+    @apply mt-2 text-sm leading-relaxed text-tinta/65;
+  }
+
+  /* ── Tarjetas de equipo (placeholder) ── */
+  .equipo-card {
+    @apply text-center;
+  }
+  /* Silueta genérica generada con CSS, sin foto de stock. */
+  .equipo-foto {
+    @apply mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-tinta/10;
+    background:
+      radial-gradient(circle at 50% 38%, theme('colors.tinta/15') 0 22%, transparent 23%),
+      radial-gradient(ellipse 60% 45% at 50% 100%, theme('colors.tinta/15') 0 60%, transparent 61%),
+      linear-gradient(160deg, theme('colors.marfil-2'), theme('colors.marfil'));
+  }
+  .equipo-nombre {
+    @apply font-serif text-base text-tinta;
+  }
+  .equipo-esp {
+    @apply mt-1 text-xs uppercase tracking-wide text-dorado;
+  }
+
+  /* ── Testimonios ── */
+  .testi-slide {
+    @apply w-full shrink-0 px-1;
+  }
+  .testi-texto {
+    @apply font-serif text-xl font-light leading-relaxed text-marfil/90 md:text-3xl;
+  }
+  .testi-autor {
+    @apply mt-6 text-sm text-dorado;
+  }
+  .testi-nav {
+    @apply grid h-11 w-11 place-items-center rounded-full border border-marfil/20 text-marfil/80 transition hover:border-dorado hover:text-dorado;
+  }
+
+  /* ── Formulario ── */
+  .form-label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-tinta/60;
+  }
+  .form-input {
+    @apply w-full rounded-xl border border-tinta/15 bg-white/70 px-4 py-3 text-sm text-tinta transition placeholder:text-tinta/35 focus:border-dorado focus:bg-white focus:outline-none;
+  }
+  .form-input.invalido {
+    @apply border-red-400 focus:border-red-400;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   FONDOS Y PLACEHOLDERS VISUALES (SVG / gradientes, sin stock)
+   ════════════════════════════════════════════════════════════════ */
+
+/* Hero: gradiente cálido animado + patrón de líneas finas doradas. */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 70% 60% at 75% 18%, rgba(201, 168, 106, 0.18), transparent 60%),
+    radial-gradient(ellipse 80% 70% at 12% 88%, rgba(19, 41, 75, 0.10), transparent 55%),
+    linear-gradient(135deg, #FAF7F2 0%, #F2ECE2 100%);
+  background-size: 200% 200%, 200% 200%, 100% 100%;
+  animation: heroShift 18s ease-in-out infinite alternate;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(19, 41, 75, 0.035) 0 1px,
+    transparent 1px 26px
+  );
+}
+@keyframes heroShift {
+  0% { background-position: 0% 0%, 100% 100%, 0 0; }
+  100% { background-position: 100% 50%, 0% 50%, 0 0; }
+}
+
+/* Arte abstracto por década en la timeline (formas orgánicas + gradientes). */
+.tl-art {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(250, 247, 242, 0.08);
+}
+.tl-art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(201, 168, 106, 0.35), transparent 45%),
+    radial-gradient(circle at 75% 70%, rgba(250, 247, 242, 0.12), transparent 50%);
+}
+.tl-art-1 { background: linear-gradient(135deg, #1b3358, #13294B); }
+.tl-art-2 { background: linear-gradient(135deg, #234070, #18305a); }
+.tl-art-3 { background: linear-gradient(135deg, #2A4570, #1d3a66); }
+.tl-art-4 { background: linear-gradient(135deg, #305080, #244572); }
+.tl-art-5 { background: linear-gradient(135deg, #C9A86A, #b08f50); }
+.tl-art-5::before {
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(19, 41, 75, 0.25), transparent 45%),
+    radial-gradient(circle at 75% 70%, rgba(250, 247, 242, 0.25), transparent 50%);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ANIMACIONES DE ENTRADA (se aplican vía JS añadiendo .is-visible)
+   ════════════════════════════════════════════════════════════════ */
+.reveal,
+.tl-item,
+.esp-card,
+.valor-card,
+.trust-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s theme('transitionTimingFunction.suave'),
+              transform 0.7s theme('transitionTimingFunction.suave');
+}
+.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ACCESIBILIDAD: respetar prefers-reduced-motion
+   Desactiva animaciones de scroll, parallax y entradas.
+   ════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal,
+  .tl-item,
+  .esp-card,
+  .valor-card,
+  .trust-item {
+    opacity: 1;
+    transform: none;
+  }
+}
