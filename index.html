@@ -132,7 +132,14 @@
       <div class="hero-bg absolute inset-0 -z-10"></div>
       <div class="absolute inset-0 -z-10 bg-gradient-to-b from-marfil/20 via-marfil/60 to-marfil"></div>
 
-      <div class="mx-auto w-full max-w-contenido px-5 pt-28 pb-16 md:px-8">
+      <!-- Diente molar 3D interactivo (decorativo). Las capas se generan en main.js. -->
+      <div class="tooth3d" aria-hidden="true">
+        <div class="tooth3d__bob">
+          <div class="tooth3d__tilt" id="tooth3d-scene"></div>
+        </div>
+      </div>
+
+      <div class="relative z-10 mx-auto w-full max-w-contenido px-5 pt-28 pb-16 md:px-8">
         <p class="reveal mb-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-ancho text-dorado">
           <span class="h-px w-8 bg-dorado"></span> Desde 1975 · Vitacura
         </p>

@@ -215,7 +215,105 @@ if (!prefiereMenosMovimiento) {
 })();
 
 /* ════════════════════════════════════════════════════════════════
-   7 · Año dinámico en el footer
+   7 · DIENTE MOLAR 3D DEL HERO
+   Extrusión por capas (marfil → dorado → tinta) generada en runtime.
+   Flota, brilla y gira en 3D siguiendo el cursor. Decorativo.
+   ════════════════════════════════════════════════════════════════ */
+(() => {
+  const scene = document.getElementById('tooth3d-scene');
+  if (!scene) return;
+
+  // Contorno del molar (corona + dos raíces) en viewBox 100×120.
+  const TOOTH_PATH =
+    'M50 8 C33 8 20 19 20 38 C20 52 25 60 27 74 C28 84 29 112 37 112 ' +
+    'C43 112 45 90 50 86 C55 90 57 112 63 112 C71 112 72 84 73 74 ' +
+    'C75 60 80 52 80 38 C80 19 67 8 50 8 Z';
+
+  // Paleta de marca para la extrusión (de atrás hacia adelante).
+  const TINTA = [19, 41, 75];     // profundidad
+  const DORADO = [201, 168, 106]; // pared dorada
+  const MARFIL = [250, 247, 242]; // esmalte frontal
+  const lerp = (a, b, t) => Math.round(a + (b - a) * t);
+  const mix = (c1, c2, t) => `rgb(${lerp(c1[0], c2[0], t)},${lerp(c1[1], c2[1], t)},${lerp(c1[2], c2[2], t)})`;
+
+  const LAYERS = 20;     // nº de "rebanadas" del extruido
+  const DEPTH = 60;      // profundidad total en px (translateZ)
+  const SVGNS = 'http://www.w3.org/2000/svg';
+
+  for (let i = 0; i < LAYERS; i++) {
+    const t = i / (LAYERS - 1);          // 0 = atrás, 1 = frente
+    const z = -DEPTH + t * DEPTH;        // de -DEPTH a 0
+
+    // Color: atrás tinta → dorado (60%) → marfil al frente.
+    const color = t < 0.6 ? mix(TINTA, DORADO, t / 0.6) : mix(DORADO, MARFIL, (t - 0.6) / 0.4);
+    const isFront = i === LAYERS - 1;
+
+    const layer = document.createElement('div');
+    layer.className = 'tooth3d__layer';
+    layer.style.transform = `translateZ(${z.toFixed(1)}px)`;
+
+    const svg = document.createElementNS(SVGNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 100 120');
+    const p = document.createElementNS(SVGNS, 'path');
+    p.setAttribute('d', TOOTH_PATH);
+    p.setAttribute('fill', color);
+    if (isFront) {
+      p.setAttribute('stroke', 'rgba(201,168,106,0.9)');
+      p.setAttribute('stroke-width', '1.5');
+    }
+    svg.appendChild(p);
+    layer.appendChild(svg);
+    scene.appendChild(layer);
+  }
+
+  // Brillo especular al frente del esmalte.
+  const shine = document.createElement('div');
+  shine.className = 'tooth3d__shine';
+  shine.style.transform = `translateZ(${(DEPTH * 0).toFixed(1)}px)`;
+  scene.appendChild(shine);
+
+  // ── Giro 3D: leve auto-giro (idle) + seguimiento del cursor ──
+  if (prefiereMenosMovimiento) {
+    scene.style.setProperty('--rx', '-8deg');
+    scene.style.setProperty('--ry', '-20deg');
+    return;
+  }
+
+  let targetRx = -6, targetRy = -16; // reposo apuntando ligeramente a la izq.
+  let curRx = targetRx, curRy = targetRy;
+  let pointerActive = false;
+
+  window.addEventListener(
+    'pointermove',
+    (e) => {
+      pointerActive = true;
+      const nx = e.clientX / window.innerWidth - 0.5;   // -0.5 … 0.5
+      const ny = e.clientY / window.innerHeight - 0.5;
+      targetRy = nx * 38;        // gira hasta ±19°
+      targetRx = -ny * 26;       // inclina hasta ±13°
+    },
+    { passive: true }
+  );
+
+  const start = performance.now();
+  const tick = (now) => {
+    // Sin cursor, oscila suavemente solo (vida propia).
+    if (!pointerActive) {
+      const s = (now - start) / 1000;
+      targetRy = -16 + Math.sin(s * 0.6) * 12;
+      targetRx = -6 + Math.cos(s * 0.5) * 6;
+    }
+    curRx += (targetRx - curRx) * 0.06;  // suavizado
+    curRy += (targetRy - curRy) * 0.06;
+    scene.style.setProperty('--rx', `${curRx.toFixed(2)}deg`);
+    scene.style.setProperty('--ry', `${curRy.toFixed(2)}deg`);
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+})();
+
+/* ════════════════════════════════════════════════════════════════
+   8 · Año dinámico en el footer
    ════════════════════════════════════════════════════════════════ */
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
