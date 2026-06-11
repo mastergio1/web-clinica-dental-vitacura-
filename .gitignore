@@ -24,3 +24,6 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.example
+
+# Artefacto editable para claude.ai/design (se regenera con: npm run design)
+clinica-vitacura.design.html

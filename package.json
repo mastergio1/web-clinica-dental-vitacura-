@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite build && node scripts/build-preview.mjs",
+    "design": "node scripts/build-design.mjs",
     "serve": "vite preview"
   },
   "dependencies": {
